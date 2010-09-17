@@ -1,17 +1,15 @@
-require 'iTunesLastfmLib.rb'
+require 'ITunesLastfmLib.rb'
 
 
-
-
-script = iTunesLastfmLib.new
-script.itunes_xml_path = "/Users/miguel/Music/iTunes 1/iTunes Library.xml"
+script = ITunesLastfmLib.new
+script.itunes_xml_path = "~/Music/iTunes 1/iTunes Library.xml"
 #the path to the xml file of your iTunes library, it is usually
 #stored in a folder named iTunes [number] inside your Music folder
-script.logfile_path = "/Users/miguel/Desktop/errors.txt"
+script.logfile_path = "~/Desktop/errors.txt"
 #a path to store the logfile which will give information
 # about errors during the process of retriving and applying
 # the album artwork, the file doesn't need to exist
-script.image_path = "/Users/miguel/Desktop/images/"
+script.image_path = "~/Desktop/images/"
 # each image retrived will be stored there
 # you'll have to delete the image after the script is over
 # and you'll have to create this folder before the script starts

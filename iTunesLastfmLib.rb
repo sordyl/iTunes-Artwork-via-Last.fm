@@ -1,3 +1,4 @@
+require 'rubygems'
 require 'rexml/document'
 require 'rack'
 require 'net/http'
@@ -6,7 +7,7 @@ require 'id3lib'
 require 'cgi'
 
 
-class iTunesLastfmLib
+class ITunesLastfmLib
    attr_accessor :itunes_xml_path, :logfile_path, :image_path, :in_control_mode, :cuts
    
    
@@ -195,7 +196,7 @@ class iTunesLastfmLib
    def start
       if  @itunes_xml_path != "" and @logfile_path != "" and @image_path != ""
          @logfile = File.new(@logfile_path, "a")
-         @map = []
+         @map = {}
 
          #getting an array of tracks, composed of the pair artist and path
          tracks = parse_itunes_library()
